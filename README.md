@@ -12,7 +12,7 @@ Simply add the following dependency to your `build.gradle` file to use the lates
 ```groovy
 dependencies {
     repositories {
-        mavenCentral()
+        maven { url 'https://jitpack.io' }
     }
     implementation 'com.github.appsfeature:SlidingUpPanel:x.y'
 }
@@ -20,7 +20,7 @@ dependencies {
 
 ### Usage
 
-* Include `com.SlidingUpPanelLayout` as the root element in your activity layout.
+* Include `com.slidinguppanel.SlidingUpPanelLayout` as the root element in your activity layout.
 * The layout must have `gravity` set to either `top` or `bottom`.
 * Make sure that it has two children. The first child is your main layout. The second child is your layout for the sliding up panel.
 * The main layout should have the width and the height set to `match_parent`.
@@ -30,7 +30,7 @@ dependencies {
 For more information, please refer to the sample code.
 
 ```xml
-<com.SlidingUpPanelLayout
+<com.slidinguppanel.SlidingUpPanelLayout
     xmlns:sothree="http://schemas.android.com/apk/res-auto"
     android:id="@+id/sliding_layout"
     android:layout_width="match_parent"
@@ -52,7 +52,7 @@ For more information, please refer to the sample code.
         android:gravity="center|top"
         android:text="The Awesome Sliding Up Panel"
         android:textSize="16sp" />
-</com.SlidingUpPanelLayout>
+</com.slidinguppanel.SlidingUpPanelLayout>
 ```
 For smooth interaction with the ActionBar, make sure that `windowActionBarOverlay` is set to `true` in your styles:
 ```xml
