@@ -8,12 +8,13 @@ This library provides a simple way to add a draggable sliding up panel (populari
 
 Simply add the following dependency to your `build.gradle` file to use the latest version:
 
+[![](https://jitpack.io/v/appsfeature/SlidingUpPanel.svg)](https://jitpack.io/#appsfeature/SlidingUpPanel)
 ```groovy
 dependencies {
     repositories {
         mavenCentral()
     }
-    compile 'com.github.appsfeature:SlidingUpPanel:1.0'
+    implementation 'com.github.appsfeature:SlidingUpPanel:x.y'
 }
 ```
 
