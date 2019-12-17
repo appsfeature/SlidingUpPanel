@@ -2,10 +2,13 @@ package com.appsfeature.slidinguppanel.demo;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.text.Html;
+import android.text.SpannableString;
+import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.Menu;
@@ -102,9 +105,9 @@ public class DemoActivity extends AppCompatActivity {
         });
 
         TextView t = (TextView) findViewById(R.id.name);
-        t.setText(Html.fromHtml(getString(R.string.hello)));
+        t.setText(fromHtml(getString(R.string.hello)));
         Button f = (Button) findViewById(R.id.follow);
-        f.setText(Html.fromHtml(getString(R.string.follow)));
+        f.setText(fromHtml(getString(R.string.follow)));
         f.setMovementMethod(LinkMovementMethod.getInstance());
         f.setOnClickListener(new OnClickListener() {
             @Override
@@ -114,6 +117,20 @@ public class DemoActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+
+    @SuppressWarnings("deprecation")
+    public static Spanned fromHtml(String html){
+        if(html == null){
+            // return an empty spannable if the html is null
+            return new SpannableString("");
+        }else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            // FROM_HTML_MODE_LEGACY is the behaviour that was used for versions below android N
+            // we are using this flag to give a consistent behaviour
+            return Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY);
+        } else {
+            return Html.fromHtml(html);
+        }
     }
 
     @Override

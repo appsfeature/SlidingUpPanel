@@ -1,6 +1,6 @@
 package com.slidinguppanel;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.ScrollView;
@@ -46,7 +46,7 @@ public class ScrollableViewHelper {
         } else if (scrollableView instanceof RecyclerView && ((RecyclerView) scrollableView).getChildCount() > 0) {
             RecyclerView rv = ((RecyclerView) scrollableView);
             RecyclerView.LayoutManager lm = rv.getLayoutManager();
-            if (rv.getAdapter() == null) return 0;
+            if (lm == null || rv.getAdapter() == null) return 0;
             if (isSlidingUp) {
                 View firstChild = rv.getChildAt(0);
                 // Approximate the scroll position based on the top child and the first visible item
