@@ -1,6 +1,5 @@
 Sliding Up Panel
-================
-Depricated Use Android BottomSheetBehavior
+================ 
 Referance:
 https://developer.android.com/reference/android/support/design/widget/BottomSheetBehavior
 https://medium.com/@nullthemall/new-bottomsheet-caab21aff19b
@@ -9,15 +8,18 @@ https://medium.com/@nullthemall/new-bottomsheet-caab21aff19b
 This library provides a simple way to add a draggable sliding up panel (popularized by Google Music and Google Maps) to your Android application.
 
 
-### Importing the Library
+## Setup Project
 
-Simply add the following dependency to your `build.gradle` file to use the latest version:
+Add this to your project build.gradle
 
-[![](https://jitpack.io/v/appsfeature/SlidingUpPanel.svg)](https://jitpack.io/#appsfeature/SlidingUpPanel)
-```groovy
-dependencies {
+Project-level build.gradle (<project>/build.gradle):
+
+``` gradle 
+allprojects {
     repositories {
-        maven { url 'https://jitpack.io' }
+        google()
+        jcenter() 
+        maven { url 'https://jitpack.io' } 
     }
 
     ext {
@@ -25,6 +27,18 @@ dependencies {
         recyclerview = '1.0.0'
     }
 }
+```
+
+Add this to your project build.gradle
+
+Module-level build.gradle (<module>/build.gradle): 
+
+#### [![](https://jitpack.io/v/appsfeature/YTPlayer.svg)](https://jitpack.io/#appsfeature/YTPlayer)
+```gradle  
+
+dependencies {
+    implementation 'com.github.appsfeature:SlidingUpPanel:x.y'
+} 
 ```
 
 ### Usage
