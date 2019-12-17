@@ -19,7 +19,11 @@ dependencies {
     repositories {
         maven { url 'https://jitpack.io' }
     }
-    implementation 'com.github.appsfeature:SlidingUpPanel:x.y'
+
+    ext {
+        appcompat = '1.1.0-alpha01'
+        recyclerview = '1.0.0'
+    }
 }
 ```
 
