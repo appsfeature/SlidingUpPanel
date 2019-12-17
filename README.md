@@ -1,5 +1,10 @@
 Sliding Up Panel
 ================
+Depricated Use Android BottomSheetBehavior
+Referance:
+https://developer.android.com/reference/android/support/design/widget/BottomSheetBehavior
+https://medium.com/@nullthemall/new-bottomsheet-caab21aff19b
+
 
 This library provides a simple way to add a draggable sliding up panel (popularized by Google Music and Google Maps) to your Android application.
 
