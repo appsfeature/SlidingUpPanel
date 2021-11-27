@@ -20,7 +20,7 @@ allprojects {
     }
 
     ext {
-        appcompat = '1.1.0-alpha01'
+        appcompat = '1.3.0'
         recyclerview = '1.0.0'
     }
 
