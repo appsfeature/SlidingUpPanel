@@ -25,7 +25,6 @@ import androidx.core.view.ViewCompat;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import com.slidinguppanel.R;
 
 public class SlidingUpPanelLayout extends ViewGroup {
 
